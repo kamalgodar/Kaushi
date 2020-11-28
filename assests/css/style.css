@@ -54,6 +54,17 @@ html, body, header, #intro {
     border: solid 3px green;
 }
 
+.generaltable{
+    background-color: #43a854;
+    width: 100%;
+    color: black;
+}
+
+.markettable{
+    border: solid 2px white;
+    text-align: center;
+}
+
 .today {
     background-color: #363032;
     color: white;

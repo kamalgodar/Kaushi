@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product, News
 
-def home(request):
+def index(request):
 
     product1 = Product()
     product1.name = 'Apple'
@@ -66,12 +66,20 @@ def home(request):
 
     news = [news1, news2, news3]
 
-    return render(request, 'index.html', {'products': products,
-                                            'news': news, })
+    return render(request, 'index.html', {'products': products, 'news': news, })
 
-# def home(response):
-#     return render(response, 'main/index.html', {})
 
-# def news(response):
-#     return HttpResponse("Here comes the news")
+
+def news(request):
+    return render(request, 'news.html', {})
+
+def market(request):
+    return render(request, 'market.html', {})
+    
+def shop(request):
+    return render(request, 'shop.html', {})
+
+def manpower(request):
+    return render(request, 'manpower.html', {})
+
 # Create your views here.
