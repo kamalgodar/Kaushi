@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static 'images' as baseUrl %}
+
+{% block content %}
+    <div class="container news">
+
+        {% for newz in news %}
+        <div class="row p-1 m-1 centercontent" >
+            <h4> {{ newz.headline}}</h4>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+    <!-- <div >
+        <div class="container">
+            <div class="row">
+                {% for prdt in products %}
+                <div class="col-md-4" style="border: solid 5px yellow; justify-content: left;">
+                    <div class="row centercontent"><img src="{% static 'images/plant.jpg' %}" width="250px" height="150px"></div>
+                    <div class="row centercontent">{{ prdt.name }}</div>
+                    <div class="row centercontent" >Rs.{{ prdt.price }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> -->
+    
+
+    <div class="container-fluid">
+        <div class="row m-3" >
+            <div class="col-md-8 mt-2 mb-3">
+                <div class="row shopbar"><h4>Shop</h4></div>
+                <!-- <h4 class="centertext">Shop</h4> -->
+                <div class="row shop shopitem">
+                    {% for prdt in products %}
+                    <div class="col-md-4">
+                        <div class="row centercontent"><img src="{{baseUrl}}/{{prdt.img}}" width="200px" height="200px"></div>
+                        <div class="row centercontent">{{ prdt.name }}</div>
+                        <div class="row centercontent" >Rs.{{ prdt.price }}</div>
+                    </div>
+                    {% endfor %}
+                </div> 
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="row market m-2 mb-4">
+                    <h4>Market</h4>
+
+                    <table class="generaltable">
+                        <tr >
+                          <th class="markettable" style="background-color: brown;">Buy</th>
+                          <th class="markettable" style="background-color: #f36c6c">Sell</th>
+                        </tr>
+                    </table>
+                    
+                </div>
+
+                <div class="row today m-2">
+                    <h4>Today's Price</h4>
+
+                        <table class="generaltable">
+                            <tr >
+                              <th class="markettable">Items</th>
+                              <th class="markettable">Price</th>
+                            </tr>
+                            <tr>
+                              <td class="markettable">Aalu</td>
+                              <td class="markettable">Rs.100</td>
+                            </tr>
+                            <tr>
+                              <td class="markettable">Tomato</td>
+                              <td class="markettable">Rs.120</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Cauliflower</td>
+                                <td class="markettable">Rs.40</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Cabbage</td>
+                                <td class="markettable">Rs.35</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Coriander</td>
+                                <td class="markettable">Rs.5</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Apple</td>
+                                <td class="markettable">Rs.100</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Khursani</td>
+                                <td class="markettable">Rs.15</td>
+                              </tr>
+                              <tr>
+                                <td class="markettable">Ginger</td>
+                                <td class="markettable">Rs.50</td>
+                              </tr>
+                              <tr>
+                                <td class="markettable">Onion</td>
+                                <td class="markettable">Rs.90</td>
+                              </tr>
+                        </table>
+                </div>
+
+                <div class="row calendar m-2 mt-4">
+                    <h4>Calendar</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block nextcontent %}
+    <!-- <h1>Now, i am on nextcontent block.</h1> -->
+{% endblock%}

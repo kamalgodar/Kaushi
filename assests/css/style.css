@@ -1,0 +1,88 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body, header, #intro {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    background-color: #335c38;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.centercontent {
+    justify-content: center; 
+}
+
+.news {  
+    color: rgb(221, 221, 221);
+}
+
+.shopbar {
+    background-color: #363032;
+    color: white;
+    border: solid 3px green;
+    justify-content: center;
+}
+
+.shop {
+    background-color: #363032;
+    color: white;
+    /* justify-content: center; */
+    height: 520px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: solid 3px green;
+    /* box-shadow: 8px 8px 5px orange; */
+}
+
+.shopitem {
+    background-color: rgb(164, 192, 148);
+    /* background-color: #43a854; */
+    border: solid 10px rgb(4, 85, 11);
+    padding: 10px;
+    color: black;
+}
+
+.market {
+    background-color: #363032;
+    color: white;
+    justify-content: center;
+    border: solid 3px green;
+}
+
+.today {
+    background-color: #363032;
+    color: white;
+    justify-content: center;
+    border: solid 2px green;
+}
+
+.calendar {
+    background-color: #363032;
+    color: white;
+    justify-content: center;
+    border: solid 2px green;
+}
+
+
+.generaltable{
+    background-color: #43a854;
+    width: 100%;
+    color: black;
+}
+
+.markettable{
+    border: solid 2px white;
+    text-align: center;
+}
+
+.footer {
+     background-color: #0e4a0b;
+     color: white;
+     justify-content: center;
+     text-align: center;
+ }
