@@ -71,10 +71,53 @@ def index(request):
 
 
 def news(request):
-    return render(request, 'news.html', {})
+
+    news1 = News()
+    news1.headline = '>> The Government has planned to distribute free seeds to farmers'
+    news1.description = 'I am a description'
+
+    news2 = News()
+    news2.headline = '>> Know the reasons behind the drastic change in the price of tomato; Is it because of border seize?'
+    news2.description = 'I am a description'
+
+    news3 = News()
+    news3.headline = '>> Experts predict the future of market '
+    news3.description = 'I am a description'
+
+    news = [news1, news2, news3]
+
+    return render(request, 'news.html', {'news': news})
+
+
+
 
 def market(request):
-    return render(request, 'market.html', {})
+
+    product1 = Product()
+    product1.name = 'Apple'
+    product1.price = 110
+    product1.img = 'carrot.jpg'
+
+    product2 = Product()
+    product2.name = 'Cauliflower'
+    product2.price = 40
+    product2.img = 'cauliflower.jpg'
+
+    product3 = Product()
+    product3.name = 'Dustpan'
+    product3.price = 200
+    product3.img = 'dustpan.jpg'
+
+    product4 = Product()
+    product4.name = 'Carrot'
+    product4.price = 30
+    product4.img = 'carrot.jpg'
+
+    products = [product1, product2, product3, product4,]
+
+    return render(request, 'market.html', {'products': products})
+
+
     
 def shop(request):
     return render(request, 'shop.html', {})

@@ -78,6 +78,7 @@ html, body, header, #intro {
 .markettable{
     border: solid 2px white;
     text-align: center;
+    color: black;
 }
 
 .footer {
@@ -86,3 +87,12 @@ html, body, header, #intro {
      justify-content: center;
      text-align: center;
  }
+
+.marketshop {
+    background-color: #363032;
+    color: white;
+    height: 100px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: solid 3px orange;
+}

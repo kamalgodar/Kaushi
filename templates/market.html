@@ -3,5 +3,137 @@
 
 {% block content %}
 
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+
+                <div class="row market m-2">
+                    <h4>Market</h4>                   
+                </div>
+
+                <div style="border: solid 2px green; background-color: brown" class="row m-2 centercontent">
+                    <h5>Buy</h5>
+                </div>
+                        
+                <div class="row marketshop shopitem m-2" style="background-color: #363032;
+                                                                color: white;
+                                                                height: 280px;
+                                                                overflow-y : hidden;
+                                                                overflow-x: scroll;
+                                                                border: solid 3px green;
+                                                                }">
+                    {% for prdt in products %}
+                    <div class="col-md-4">
+                        <div class="row centercontent"><img src="{{baseUrl}}/{{prdt.img}}" width="200px" height="200px"></div>
+                        <div class="row centercontent">{{ prdt.name }}</div>
+                        <div class="row centercontent" >Rs.{{ prdt.price }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="row m-2 centercontent" style="border: solid 2px green; background-color: #f36c6c">
+                    <h5>Sell</h5>
+                </div>
+
+                <div class="m-2 p-2" style="border: solid 2px green; color: wheat">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    Name:
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Price:
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Phone:
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Description:
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Image:
+                                </td>
+                            </tr>
+                        </table>
+
+                        <input type="file" name="" id=""> <br> <br>
+
+                        <button class="px-3" style="background-color: red">Sell</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h4 style="color: white">Today's Price</h4>
+
+                        <table class="generaltable">
+                            <tr >
+                              <th class="markettable">Items</th>
+                              <th class="markettable">Price</th>
+                            </tr>
+                            <tr>
+                              <td class="markettable">Aalu</td>
+                              <td class="markettable">Rs.100</td>
+                            </tr>
+                            <tr>
+                              <td class="markettable">Tomato</td>
+                              <td class="markettable">Rs.120</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Cauliflower</td>
+                                <td class="markettable">Rs.40</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Cabbage</td>
+                                <td class="markettable">Rs.35</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Coriander</td>
+                                <td class="markettable">Rs.5</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Apple</td>
+                                <td class="markettable">Rs.100</td>
+                            </tr>
+                            <tr>
+                                <td class="markettable">Khursani</td>
+                                <td class="markettable">Rs.15</td>
+                              </tr>
+                              <tr>
+                                <td class="markettable">Ginger</td>
+                                <td class="markettable">Rs.50</td>
+                              </tr>
+                              <tr>
+                                <td class="markettable">Onion</td>
+                                <td class="markettable">Rs.90</td>
+                              </tr>
+                        </table>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}
