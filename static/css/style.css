@@ -39,6 +39,19 @@ html, body, header, #intro {
     /* box-shadow: 8px 8px 5px orange; */
 }
 
+/* for shop page */
+
+.shop1 {
+    background-color: #363032;
+    color: white;
+    /* justify-content: center; */
+    /* height: 520px;
+    overflow: hidden;
+    overflow-y: scroll; */
+    border: solid 3px green;
+
+}
+
 .shopitem {
     background-color: rgb(164, 192, 148);
     /* background-color: #43a854; */
