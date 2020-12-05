@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% static 'images' as baseUrl %}
+{% static "images" as baseUrl %}
 
 {% block content %}
     <div class="container news">
@@ -36,10 +36,14 @@
                 <!-- <h4 class="centertext">Shop</h4> -->
                 <div class="row shop shopitem">
                     {% for prdt in products %}
-                    <div class="col-md-4">
-                        <div class="row centercontent"><img src="{{baseUrl}}/{{prdt.img}}" width="200px" height="200px"></div>
-                        <div class="row centercontent">{{ prdt.name }}</div>
-                        <div class="row centercontent" >Rs.{{ prdt.price }}</div>
+                    <div class="col-md-4" style="border: solid 2px maroon;">
+                        <div class="row centercontent"><img src="{{baseUrl}}/{{prdt.img1}}" width="200px" height="200px"></div>
+                        <div class="row centercontent"><strong>{{ prdt.name }}</strong></div>  
+
+                        <div class="row centercontent">
+                            <div class="col-md-8 centertext" style="background-color: white;"><strong>Rs.{{ prdt.price }}</strong></div>
+                            <div class="col-md-4 centertext" style="background-color: green;"><i class="fas fa-cart-plus"></i></div>
+                        </div>
                     </div>
                     {% endfor %}
                 </div> 

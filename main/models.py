@@ -4,7 +4,7 @@ from django.db import models
 class Product:
     id : int
     name: str
-    img: str
+    img1: str
     price : int
 
 

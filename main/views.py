@@ -7,47 +7,47 @@ def index(request):
     product1 = Product()
     product1.name = 'Apple'
     product1.price = 110
-    product1.img = 'carrot.jpg'
+    product1.img1 = 'carrot.jpg'
 
     product2 = Product()
     product2.name = 'Cauliflower'
     product2.price = 40
-    product2.img = 'cauliflower.jpg'
+    product2.img1 = 'cauliflower.jpg'
 
     product3 = Product()
     product3.name = 'Dustpan'
     product3.price = 200
-    product3.img = 'dustpan.jpg'
+    product3.img1 = 'dustpan.jpg'
 
     product4 = Product()
     product4.name = 'Carrot'
     product4.price = 30
-    product4.img = 'carrot.jpg'
+    product4.img1 = 'carrot.jpg'
 
     product5 = Product()
     product5.name = 'Sprayer'
     product5.price = 120
-    product5.img = 'sprayer.jpg'
+    product5.img1 = 'sprayer.jpg'
 
     product6 = Product()
     product6.name = 'Gloves'
     product6.price = 80
-    product6.img = 'gloves.jpg'
+    product6.img1 = 'gloves.jpg'
 
     product7 = Product()
     product7.name = 'Compost Manure'
     product7.price = 40
-    product7.img = 'compostmanure.jpg'
+    product7.img1 = 'compostmanure.jpg'
 
     product8 = Product()
     product8.name = 'Spade'
     product8.price = 150
-    product8.img = 'spade.jpg'
+    product8.img1 = 'spade.jpg'
 
     product9 = Product()
     product9.name = 'Cabbahge'
     product9.price = 40
-    product9.img = 'carrot.jpg'
+    product9.img1 = 'carrot.jpg'
 
     products = [product1, product2, product3, product4, product5, product6, product7, product8, product9]
 
@@ -172,5 +172,8 @@ def shop(request):
 
 def manpower(request):
     return render(request, 'manpower.html', {})
+
+def mycart(request):
+    return render(request, 'mycart.html', {})
 
 # Create your views here.
